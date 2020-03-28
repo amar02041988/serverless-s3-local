@@ -190,6 +190,7 @@ class ServerlessS3Local {
       } = this.options;
       if (noStart) {
         this.createBuckets().then(resolve, reject);
+        this.subscribe();
         return;
       }
 
